@@ -70,6 +70,7 @@ getQuestion();
 }
 // get question function 
 var getQuestion = function(){
+    
     // cleare the questionEl and selectionEl
     selectionEl.innerHTML="";
     //get cuurent question object from the array 
@@ -138,38 +139,19 @@ var saveScore =function(){
         };
         highScores.push(newScore);
         window.localStorage.setItem("highScores",JSON.stringify(highScores));
-        window.location.href="./highscore.html"
+        
         allDoneEl.style.display="none";
         feedbackEl.style.display="none";
         scoreEl.style.display="block";
-    }
-    //set score
-    var scores = function(){
-        //git score from localstorage or set to empty array
-        score = JSON.parse(window.localStorage.getItem("highScores")) || [];
-        //sort the score
-        score.sort(function(a,b){
-            return b.score - a.score
-        })
-        for (var i = 0; i<score.length; i++){
-            var liItems= document.createElement("li")
-            liItems.textContent=score[i].initials + ":" + score[i].score;
-            olEl.appendChild(liItems);
-    }
-    var clearScore = function(){
-        localStorage.clear();
-        olEl.style.display="none";
+        window.location.href="./highscore.html";
 
-    }
-    
-    clearBtn.addEventListener("click",clearScore);
     }
     var restart =function(){
         document.location.reload();
     }
     var BackBtn = document.getElementById("Back");
     BackBtn.addEventListener("click",restart);
-    scores();
+    
 }
 
        
