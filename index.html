@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quize</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <div class= "quiz" id="start-quiz">
+            <h1 class="page-title">Coding Quiz Challenge</h1>
+                <P> Try to answer the following code-related qyestion within the time limit.
+                     keep in mind that incorrect aswers will penalize yourscore/time by ten seconds! </P>
+                     <button id="start" class="start-btn">Start Quize</button>
+        </div>
+        <div  class="high-score">
+            <p><a href="./highscore.html" id="highScorese">View Highscore</p>
+        </div>
+        <div class="timer">Timer: 
+            <span id="time">0</span>
+           </div>   
+    </header>
+    <section id="questions-list" class="question">
+        <h2 id="the-question"></h2>
+        <ol id="selection" class="choice"></ol>
+    </section>
+    <section id="all-done" class="hidden">
+        <h2>All done!</h2>
+        <p> Your final Score is</p> 
+        <p>Enter your initials: <input type="text" id="init"/></p>
+        <button id="submit" class="btn">Submit</button>
+    </section>
+    <div id="feedback" class="feedback-style"></div>
+    <div id ="sco" class = "final-score">
+        <h1>Highscore</h1>
+        <ol id="highScoreList"></ol>
+        <button id=Back class="btn">Go Back</button>
+        <button id="Clear" class="btn">Clear</button>
+    </div>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
