@@ -138,6 +138,7 @@ var saveScore =function(){
         };
         highScores.push(newScore);
         window.localStorage.setItem("highScores",JSON.stringify(highScores));
+        window.location.href="./highscore.html"
         allDoneEl.style.display="none";
         feedbackEl.style.display="none";
         scoreEl.style.display="block";
@@ -170,11 +171,7 @@ var saveScore =function(){
     BackBtn.addEventListener("click",restart);
     scores();
 }
-var showScore =function(){
-    var x =localStorage.getItem("highScores")
-    return x;
-}
+
        
 startBtn.addEventListener("click",startQuiz);
 submitBtn.addEventListener("click",saveScore);
-highScorEl.addEventListener("click",showScore);
